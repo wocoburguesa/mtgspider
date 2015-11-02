@@ -1,0 +1,85 @@
+*.py[cod]
+*~
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib64
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+.idea
+
+# File Junk
+.DS_Store
+
+#never check-in local_settings - it should be a symlink
+local_settings.py
+local_settings.js
+
+#node.js modules
+nodejs/node_modules
+
+#jenkins reports
+django/amigoserver/reports/*
+test_out
+
+#django files while running
+django_db.conf
+django.log*
+django_traffic.log*
+
+#celery process id files generated while running
+celerybeat-schedule
+celerybeat.pid
+celeryev.pid
+
+# vagrant machine temporary files
+hostusername.txt
+amigocloudusername.txt
+vagrant/ssh
+vagrant/git
+.vagrant
+
+# selenium download files and virtual environment
+*.xpi
+*.jar
+virtual_env/
+
+# selenium reports
+selenium/reports/
+
+# node modules
+node_modules/
+
+# grunt
+django/amigoserver/frontend/app/dashboard_app/js/amigoapp.js
+django/amigoserver/frontend/app/dashboard_app/js/amigoapp.min.js
+django/amigoserver/frontend/app/dashboard_app/js/amigoapp.min.js.map
+django/amigoserver/frontend/app/dashboard_app/index.html
