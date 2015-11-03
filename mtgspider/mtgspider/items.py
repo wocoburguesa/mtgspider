@@ -26,6 +26,13 @@ def get_player(value):
 
 
 class EventItem(scrapy.Item):
+    """
+    id: event id, it looks like they are assigned auto-increasing integers.
+    url: event url.
+    date: extracted from event description.
+    players: list of participants in the event. Will use this to generate
+    user stats down the pipeline.
+    """
     id = scrapy.Field(
         input_processor=get_event_id
     )
@@ -39,6 +46,9 @@ class EventItem(scrapy.Item):
 
 
 class DeckItem(scrapy.Item):
+    """
+    Coming soon
+    """
     pilot = scrapy.Field()
     planeswalkers = scrapy.Field()
     creatures = scrapy.Field()
