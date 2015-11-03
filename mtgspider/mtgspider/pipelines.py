@@ -5,12 +5,15 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
-import pymongo
+#import pymongo
 from scrapy.exceptions import DropItem
 from scrapy.conf import settings
 
 
 class DuplicatesPipeline(object):
+    """
+    Drop events with duplicate ids.
+    """
 
     def __init__(self):
         self.ids_seen = set()
@@ -25,6 +28,10 @@ class DuplicatesPipeline(object):
 
 
 class PlayerStatsPipeline(object):
+    """
+    Populate a MongoDB collection with player ids and number of events in which
+    they have participated.
+    """
 
     def __init__(self):
         connection = pymongo.MongoClient(

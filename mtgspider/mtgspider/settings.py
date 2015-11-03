@@ -49,14 +49,14 @@ DOWNLOAD_DELAY=1
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
-    'scrapyjs.SplashMiddleware': 725,
-}
+#DOWNLOADER_MIDDLEWARES = {
+#    'scrapyjs.SplashMiddleware': 725,
+#}
 
 # Splash settings
-SPLASH_URL = 'http://192.168.99.100:8050/'
-DUPEFILTER_CLASS = 'scrapyjs.SplashAwareDupeFilter'
-HTTPCACHE_STORAGE = 'scrapyjs.SplashAwareFSCacheStorage'
+#SPLASH_URL = 'http://192.168.99.100:8050/'
+#DUPEFILTER_CLASS = 'scrapyjs.SplashAwareDupeFilter'
+#HTTPCACHE_STORAGE = 'scrapyjs.SplashAwareFSCacheStorage'
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
@@ -69,13 +69,13 @@ EXTENSIONS = {
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'mtgspider.pipelines.DuplicatesPipeline': 300,
-    'mtgspider.pipelines.PlayerStatsPipeline': 500
+#    'mtgspider.pipelines.PlayerStatsPipeline': 500
 }
 
-MONGODB_SERVER = "localhost"
-MONGODB_PORT = 27017
-MONGODB_DB = "mtgo"
-MONGODB_COLLECTION = "player_stats"
+#MONGODB_SERVER = "localhost"
+#MONGODB_PORT = 27017
+#MONGODB_DB = "mtgo"
+#MONGODB_COLLECTION = "player_stats"
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -97,4 +97,4 @@ MONGODB_COLLECTION = "player_stats"
 #HTTPCACHE_STORAGE='scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 # Project-specific settings
-CLICK_LOAD_MORE_ITERATIONS = 3
+#CLICK_LOAD_MORE_ITERATIONS = 3
